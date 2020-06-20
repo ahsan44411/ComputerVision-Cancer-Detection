@@ -15,7 +15,7 @@ The dataset went through the following Preprocessing procedure.
 2. Binary Masks Generation:
    Images from the challenge came with csv files which indicated the area where the tumor was present. TUPAC'16 and ICPR'14 csv files contained only x and y location of the tumor so we created white circle on that location of randon radius (10-17 pixels) since we do not know the actual size of the tumor. ICPR'12 came with csv files that contained x and y locations of the entire tumor.
    
-![Binary Image](https://github.com/[ahsan44411]/Circular Binary Masks.JPG)
+![Binary Image](https://github.com/[ahsan44411]/Circular_Binary_Masks.JPG)
 
 
 # Detection
