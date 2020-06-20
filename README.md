@@ -15,13 +15,13 @@ The dataset went through the following Preprocessing procedure.
 2. Binary Masks Generation:
    Images from the challenge came with csv files which indicated the area where the tumor was present. TUPAC'16 and ICPR'14 csv files contained only x and y location of the tumor so we created white circle on that location of randon radius (10-17 pixels) since we do not know the actual size of the tumor. ICPR'12 came with csv files that contained x and y locations of the entire tumor.
    
-![Binary Image](https://github.com/[ahsan44411]/Circular_Binary_Masks.JPG)
+![Binary Image](https://github.com/ahsan44411/Cancer-Detection/blob/master/Circular%20Binary%20Masks.JPG)
 
 
 # Detection
 For detection we used a Mask RCNN. The Mask RCNN works towards the problem of Detection and Segmentation. We used Detectron 2, Mask RCNN for this problem. It had the following architecture. 
 
-Add image here
+![Binary Image](https://github.com/ahsan44411/Cancer-Detection/blob/master/Mask%20RCNN.JPG)
 
 
 It was trained on the a Tesla K80 GPU with a batch size of 20 and a learning rate of 0.00025. l1-loss and cls-loss were used for detection and pixel-wise cross entropy loss for pixel wise segmentation.
@@ -37,7 +37,8 @@ The CNN used had three convolutional blocks along with Max Pooling and Drop out 
 The model was first trained on a large balanced Malaria cell dataset. After that transfer learning was used to train it on own cancer dataset and first and second convolutional blocks were frozen while 3rd block and dense layers were trained again as part of the fine tuning step.
 
 The model was trained on a Tesla K80 GPU, Framework used was Keras, optimizer used was Adam.
-[Image here]
+
+![Binary Image](https://github.com/ahsan44411/Cancer-Detection/blob/master/CNN.JPG)
 
 
 The CNN achieved the highest results with a F-score of 0.78. It preformed better then VGG16 because it is a smaller network suited for small dataset and it was first trained on a cell dataset and transfer learning was used.
