@@ -10,4 +10,5 @@ Cascade RCNN:
 Cascade uses a VOC styled dataset. We have used mmdetection models. The models use are pre-trained on ImageNet dataset.
 
 Evaluation:
+
 The F-score was used as an evaluation measure for these models. Basically first all the predictions are checked if predictions are within 40 pixels of eachother, only one is kept while others are deleted. Then predictions are checked with the original annotations, if they are within 30 pixel it is considered a True Positive, if it misses any they are False Negative and if any prediction is not within 30 pixel of any actual tumor, then we consider it as a False Positive.
